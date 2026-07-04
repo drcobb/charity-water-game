@@ -7,40 +7,70 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="game-container">
+  <main>
     <section class="hero">
-      <h1>Pipeline Panic</h1>
-      <p>Fix broken pipes, collect clean water, and help a village reach its water goal.</p>
+      <div class="hero-text">
+        <p class="tagline">charity: water inspired game</p>
+        <h1>Pipeline Panic</h1>
+        <p>
+          Fix broken pipes, collect clean water, and help a village reach its clean water goal before time runs out.
+        </p>
+      </div>
     </section>
 
-    <section class="controls">
-      <label for="difficulty">Choose difficulty:</label>
-      <select id="difficulty">
-        <option value="easy">Easy</option>
-        <option value="normal" selected>Normal</option>
-        <option value="hard">Hard</option>
-      </select>
+    <section class="panel">
+      <div class="controls">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy - More time, fewer points</option>
+          <option value="normal" selected>Normal - Balanced challenge</option>
+          <option value="hard">Hard - Less time, more hazards</option>
+        </select>
 
-      <button id="startBtn">Start Game</button>
-      <button id="resetBtn">Reset</button>
+        <button id="startBtn">Start Game</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <div class="stats">
+        <div>
+          <span id="score">0</span>
+          <p>Water Points</p>
+        </div>
+        <div>
+          <span id="goal">15</span>
+          <p>Goal</p>
+        </div>
+        <div>
+          <span id="time">30</span>
+          <p>Seconds</p>
+        </div>
+        <div>
+          <span id="lives">3</span>
+          <p>Lives</p>
+        </div>
+      </div>
+
+      <p id="message">Choose a difficulty and start the mission.</p>
+      <p id="milestone"></p>
+
+      <section id="gameArea" class="game-area">
+        <div class="village">
+          <span>🏘️</span>
+          <p>Village Water Tank</p>
+        </div>
+      </section>
     </section>
-
-    <section class="stats">
-      <p>Score: <span id="score">0</span></p>
-      <p>Goal: <span id="goal">15</span></p>
-      <p>Time: <span id="time">30</span>s</p>
-    </section>
-
-    <p id="message">Pick a difficulty and start fixing pipes!</p>
-    <p id="milestone"></p>
-
-    <section id="gameArea" class="game-area"></section>
   </main>
 
   <footer>
-    <p>Inspired by charity: water’s mission to bring clean and safe water to communities.</p>
-    <a href="https://www.charitywater.org/" target="_blank">Visit charity: water</a>
-    <a href="https://www.charitywater.org/donate" target="_blank">Donate</a>
+    <h2>Support the Mission</h2>
+    <p>
+      This game is inspired by charity: water’s work to bring clean and safe water to people around the world.
+    </p>
+    <div class="footer-links">
+      <a href="https://www.charitywater.org/" target="_blank">Visit charity: water</a>
+      <a href="https://www.charitywater.org/donate" target="_blank">Donate Now</a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
